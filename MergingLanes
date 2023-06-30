@@ -1,0 +1,1 @@
+id_base=5; for i in {1..35}; do id=$(printf "23L%06d" $((id_base + i - 1))); s="S$i"; for r in 1 2; do file1="${id}_${s}_L001_R${r}_001.fastq.gz"; file2="${id}_${s}_L002_R${r}_001.fastq.gz"; outfile="LanesMerged/${id}_${s}_Lmerged_R${r}_001.fastq.gz"; cat $file1 $file2 > $outfile; done; done
